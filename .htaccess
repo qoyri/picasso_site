@@ -8,7 +8,8 @@ RewriteRule ^contact$ web/informations/contact.php [L]
 RewriteRule ^picasso$ web/picasso.php [L]
 RewriteRule ^tarifs$ web/tarifs.php [L]
 RewriteRule ^billeterie$ web/billeterie.php [L]
-RewriteRule ^admin$ web/admin.php [L]
+RewriteRule ^admin$ web/admin/admin.php [L]
+RewriteRule ^login$ web/admin/login.php [L]
 
 
 ErrorDocument 400 error_pages/400.php
