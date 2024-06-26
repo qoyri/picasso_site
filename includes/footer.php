@@ -24,9 +24,8 @@
             <div class="col-md-6 col-sm-12">
                 <h5 class="text-uppercase mb-4">Liens utiles</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-reset">Lien 1</a></li>
-                    <li><a href="#" class="text-reset">Lien 2</a></li>
-                    <li><a href="#" class="text-reset">Lien 3</a></li>
+                    <li><a href="/contact" class="text-reset">Contact</a></li>
+                    <li><a href="https://fr.wikipedia.org/wiki/Pablo_Picasso" class="text-reset">A propos de Picasso Wiki</a></li>
                 </ul>
             </div>
 

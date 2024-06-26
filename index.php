@@ -36,9 +36,8 @@
                     <a class="nav-link" href="/picasso">À propos de Picasso</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Menu 3</a>
+                    <a class="nav-link" href="/tarifs">Tarifs</a>
                 </li>
-                <!-- Add more in the similar way -->
             </ul>
         </div>
     </div>
@@ -311,9 +310,8 @@
             <div class="col-md-6 col-sm-12">
                 <h5 class="text-uppercase mb-4">Liens utiles</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-reset">Lien 1</a></li>
-                    <li><a href="#" class="text-reset">Lien 2</a></li>
-                    <li><a href="#" class="text-reset">Lien 3</a></li>
+                    <li><a href="/contact" class="text-reset">Contact</a></li>
+                    <li><a href="https://fr.wikipedia.org/wiki/Pablo_Picasso" class="text-reset">A propos de Picasso Wiki</a></li>
                 </ul>
             </div>
 

@@ -36,9 +36,8 @@
                     <a class="nav-link" href="/picasso">À propos de Picasso</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/tarifs">Tatifs</a>
+                    <a class="nav-link" href="/tarifs">Tarifs</a>
                 </li>
-                <!-- Add more in the similar way -->
             </ul>
         </div>
     </div>

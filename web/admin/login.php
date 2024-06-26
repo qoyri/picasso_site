@@ -1,5 +1,6 @@
 <?php
 session_start();
+$config = json_decode(file_get_contents('../../config/config.json'), true);
 include '../../config/db_config.php'; // Fichier contenant la connexion à la base de données
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

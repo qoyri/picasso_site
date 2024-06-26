@@ -1,5 +1,6 @@
 <?php
 session_start();
+$config = json_decode(file_get_contents('../../config/config.json'), true);
 include '../../config/db_config.php';
 
 if (!isset($_SESSION['loggedin'])) {

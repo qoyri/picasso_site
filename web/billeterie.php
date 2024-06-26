@@ -1,4 +1,6 @@
-
+<?php
+$config = json_decode(file_get_contents('../config/config.json'), true);
+include '../config/db_config.php'; ?>
 <?php include '../includes/header.php'; ?>
 <div class="container my-5">
     <h2 class="text-center mb-4">Billetterie</h2>
@@ -13,26 +15,21 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Adulte</td>
-                    <td>12.50</td>
-                    <td><input type="number" id="adultTickets" class="form-control" value="0" min="0" onchange="calculateTotal()"></td>
-                </tr>
-                <tr>
-                    <td>Enfant</td>
-                    <td>8.00</td>
-                    <td><input type="number" id="childTickets" class="form-control" value="0" min="0" onchange="calculateTotal()"></td>
-                </tr>
-                <tr>
-                    <td>Senior</td>
-                    <td>10.00</td>
-                    <td><input type="number" id="seniorTickets" class="form-control" value="0" min="0" onchange="calculateTotal()"></td>
-                </tr>
-                <tr>
-                    <td>Étudiant</td>
-                    <td>9.00</td>
-                    <td><input type="number" id="studentTickets" class="form-control" value="0" min="0" onchange="calculateTotal()"></td>
-                </tr>
+                <?php
+                if ($result->num_rows > 0) {
+                    // Afficher les données de chaque ligne
+                    while($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $row["category"] . "</td>";
+                        echo "<td>" . $row["price"] . "</td>";
+                        echo "<td><input type='number' class='form-control' value='0' min='0' onchange='calculateTotal()' data-price='" . $row["price"] . "'></td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='3' class='text-center'>Aucun tarif trouvé</td></tr>";
+                }
+                $conn->close();
+                ?>
                 </tbody>
             </table>
             <div class="text-right">

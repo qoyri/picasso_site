@@ -1,8 +1,10 @@
 <?php
-// Lire le fichier JSON et obtenir les paramètres de connexion
-$configFile = 'config.json'; // Chemin vers votre fichier JSON
-$config = json_decode(file_get_contents($configFile), true);
+// Vérifier si les informations ont été correctement lues
+if (json_last_error() !== JSON_ERROR_NONE) {
+    die("Error reading database configuration: " . json_last_error_msg());
+}
 
+// Récupérer les informations de connexion
 $servername = $config['servername'];
 $username = $config['username'];
 $password = $config['password'];
@@ -19,17 +21,4 @@ if ($conn->connect_error) {
 // Requête SQL pour récupérer les tarifs
 $sql = "SELECT category, price FROM tarifs";
 $result = $conn->query($sql);
-
-// Afficher les résultats
-if ($result->num_rows > 0) {
-    // Output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "Category: " . $row["category"]. " - Price: " . $row["price"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}
-
-// Fermer la connexion
-$conn->close();
 ?>

@@ -1,4 +1,6 @@
-<?php include '../config/db_config.php'; ?>
+<?php
+$config = json_decode(file_get_contents('../config/config.json'), true);
+include '../config/db_config.php'; ?>
 <?php include '../includes/header.php'; ?>
 <div class="container my-5">
     <div class="header">
