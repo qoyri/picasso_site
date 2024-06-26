@@ -74,7 +74,7 @@ $prices = $conn->query("SELECT * FROM tarifs");
 <div class="container">
     <?php if (!isset($_SESSION['loggedin'])): ?>
         <h2>Connexion Admin</h2>
-        <form method="post" action="admin.php">
+        <form method="post" action="/admin">
             <div class="form-group">
                 <label for="username">Nom d'utilisateur</label>
                 <input type="text" class="form-control" id="username" name="username" required>
@@ -90,7 +90,7 @@ $prices = $conn->query("SELECT * FROM tarifs");
         <div class="admin-container">
             <h2>Admin - Modifier les Tarifs</h2>
             <?php if (isset($message)) { echo "<p class='text-success'>$message</p>"; } ?>
-            <form method="post" action="admin.php">
+            <form method="post" action="/admin">
                 <div class="form-group">
                     <label for="category">Catégorie</label>
                     <select class="form-control" id="category" name="category" required>
@@ -116,7 +116,7 @@ $prices = $conn->query("SELECT * FROM tarifs");
                 </thead>
                 <?php while ($row = $prices->fetch_assoc()): ?>
                     <tr>
-                        <form method="post" action="admin.php">
+                        <form method="post" action="/admin">
                             <td><?php echo $row['category']; ?></td>
                             <td><input type="number" name="price" class="form-control" value="<?php echo $row['price']; ?>" step="0.01" min="0"></td>
                             <td>
