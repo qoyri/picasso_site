@@ -4,8 +4,7 @@ session_start();
 // Charger la configuration depuis le fichier JSON
 $config = json_decode(file_get_contents('../../config/config.json'), true);
 
-// Créer une connexion à la base de données
-$conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
+include '../../config/db_config.php';
 
 // Vérifier la connexion
 if ($conn->connect_error) {
@@ -35,13 +34,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_price'])) {
     $id = $_POST['id'];
     $price = $_POST['price'];
 
-    $stmt = $conn->prepare("UPDATE ticket_prices SET price = ? WHERE id = ?");
+    $stmt = $conn->prepare("UPDATE tarifs SET price = ? WHERE id = ?");
     $stmt->bind_param("di", $price, $id);
     $stmt->execute();
 }
 
 // Récupérer les tarifs actuels
-$prices = $conn->query("SELECT * FROM ticket_prices");
+$prices = $conn->query("SELECT * FROM tarifs");
 ?>
 
 <!DOCTYPE html>
