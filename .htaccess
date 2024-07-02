@@ -1,7 +1,7 @@
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php
+RewriteRule ^(.*)$ $1.php [L]
 
 RewriteRule ^oeuvres$ web/oeuvres.php [L]
 RewriteRule ^contact$ web/contact.php [L]
@@ -10,7 +10,6 @@ RewriteRule ^tarifs$ web/tarifs.php [L]
 RewriteRule ^billeterie$ web/billeterie.php [L]
 RewriteRule ^admin$ web/admin/admin.php [L]
 RewriteRule ^login$ web/admin/login.php [L]
-
 
 ErrorDocument 400 error_pages/400.php
 ErrorDocument 401 error_pages/401.php
