@@ -1,6 +1,6 @@
 {
   "servername": "localhost",
-  "username": "local",
-  "password": "SECRET",
-  "dbname": "billeterie"
+  "username": "pic",
+  "password": "pic123/",
+  "dbname": "picasso"
 }
