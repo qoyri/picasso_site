@@ -153,6 +153,10 @@ footer {
     align-items: center;
 }
 
+.ml-auto {
+    align-items: center;
+}
+
 #home-video {
     position: absolute;
     right: 0;
