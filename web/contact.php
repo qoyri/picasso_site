@@ -38,7 +38,9 @@
             <div class="col">
                 <h3>Localisez-nous</h3>
                 <!-- Note: You need to embed Google Maps iframe code here -->
-                <iframe id="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.6148895757483!2d6.125654654563053!3d45.899014843476934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8fefd42e8b53%3A0xd4da98f8096cf6de!2sConservatoire%20d'Art%20et%20d'Histoire!5e0!3m2!1sfr!2sfr!4v1719356341583!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="iframe-container">
+                    <iframe id="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.6148895757483!2d6.125654654563053!3d45.899014843476934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8fefd42e8b53%3A0xd4da98f8096cf6de!2sConservatoire%20d'Art%20et%20d'Histoire!5e0!3m2!1sfr!2sfr!4v1719356341583!5m2!1sfr!2sfr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </main>
