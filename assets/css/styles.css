@@ -134,6 +134,7 @@ footer {
     .navbar-collapse.show {
         max-height: 500px; /* Ajustez cette valeur en fonction du nombre d'éléments dans le menu */
         align-items: center;
+        z-index: 25;
     }
 }
 
